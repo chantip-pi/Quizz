@@ -57,21 +57,6 @@ const MushroomQuiz = () => {
     setResults(null);
   };
 
-  // Share URL Generator
-  const generateShareURL = (platform: string) => {
-    const resultText = results ? `Mushroom Personality Quiz Result! Your are ${results.name} mushroom` : '';
-    const shareUrl = encodeURIComponent(`${resultText}`);
-    const pageUrl = encodeURIComponent(window.location.href); // Current page URL for sharing
-
-    switch (platform) {
-      case "twitter":
-        return `https://twitter.com/intent/tweet?text=${shareUrl}&url=${pageUrl}`;
-      case "facebook":
-        return `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
-      default:
-        return "";
-    }
-  };
 
   return (
     <Card className="w-full mx-auto sm:max-w-xs md:max-w-md lg:max-w-lg xl:max-w-xl px-4">
@@ -149,15 +134,6 @@ const MushroomQuiz = () => {
                     </li>
                   ))}
                 </ul>
-
-                <div className="mt-4 space-x-4 flex justify-center">
-                  <Button variant="outline" onClick={() => window.open(generateShareURL("twitter"), "_blank")}>
-                    Share on X
-                  </Button>
-                  <Button variant="outline" onClick={() => window.open(generateShareURL("facebook"), "_blank")}>
-                    Share on Facebook
-                  </Button>
-                </div>
               </div>
             </div>
 
