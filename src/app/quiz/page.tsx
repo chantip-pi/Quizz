@@ -59,7 +59,7 @@ const MushroomQuiz = () => {
   };
 
   return (
-    <Card className="w-full mx-auto px-4">
+    <Card className="w-full mx-auto sm:max-w-xs md:max-w-md lg:max-w-lg xl:max-w-xl px-4">
       <CardHeader>
         <CardTitle className="text-2xl text-center">
           {showResults ? "Your Personality Results" : "Which Mushroom are you Quiz"}
