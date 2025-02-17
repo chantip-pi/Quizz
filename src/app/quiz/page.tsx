@@ -59,7 +59,7 @@ const MushroomQuiz = () => {
   };
 
   return (
-    <Card className="w-full max-w-lg mx-auto">
+    <Card className="w-full max-w-lg mx-auto sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
       <CardHeader>
         <CardTitle className="text-2xl text-center">
           {showResults ? "Your Personality Results" : "Which Mushroom are you Quiz"}
@@ -82,7 +82,7 @@ const MushroomQuiz = () => {
                 <Button
                   key={index}
                   variant="outline"
-                  className="w-full text-left justify-start h-auto py-3"
+                  className="w-full text-left justify-start h-auto py-3 truncate"
                   onClick={() => handleAnswer(option)}
                 >
                   {option.text}
